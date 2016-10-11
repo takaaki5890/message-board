@@ -5,7 +5,9 @@
     
   <div class="panel-body">
     <% @messages.each do |message| %>
-      <span class="label label-info"><%= message.name %></span>
+      <span class="label label-info">
+        <%= message.name %>
+        </span>
       <%= message.body %>
       <br>
     <% end %>
@@ -13,25 +15,6 @@
 </div>
 
 
-<%#= form_for(@message, :html => {:class => "form-horizontal"}) do |f| %>
-<%= form_for(@message, html:{class: "form-horizontal"}) do |f| %>
-  <div class="form-group">
-    <%= f.label :name, "名前", class: "col-md-2 control-label" %>
-    <div class="col-md-10">
-      <%= f.text_field :name, class:"form-control" %>
-    </div>
-  </div>
-  
-  <div class="form-group">
-  <%= f.label :body, "内容",class: "col-md-2 control-label" %>  
-   <div class="col-md-10">
-    <%= f.text_area :body, class:"form-control" %>
-   </div>
-  </div>
-  
-  <div class="form-group">
-    <div class="col-md-10 col-md-offset-2">
-    <%= f.submit class: "btn btn-sm btn-primary" %>
-  </div>
-  </div>
-<% end %>
+<%  %>
+
+<%= render 'form' %>
