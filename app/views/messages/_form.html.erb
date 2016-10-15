@@ -4,19 +4,19 @@
 
     <div class="alert alert-danger">
       
-<%= alert %>
+    <%= alert %>
 
       <ul>
         
-<% @message.errors.full_messages.each do |full_message| %>
+        <% @message.errors.full_messages.each do |full_message| %>
 
           <li>
             
-<%= full_message %>
+            <%= full_message %>
 
           </li>
         
-<% end %>
+        <% end %>
  
       </ul>
     </div>
@@ -31,11 +31,19 @@
   </div>
   
   <div class="form-group">
+  <%= f.label :age, "年齢",class: "col-md-2 control-label" %>  
+   <div class="col-md-10">
+    <%= f.text_field :age, class:"form-control" %>
+   </div>
+  </div>
+  
+  <div class="form-group">
   <%= f.label :body, "内容",class: "col-md-2 control-label" %>  
    <div class="col-md-10">
     <%= f.text_area :body, class:"form-control" %>
    </div>
   </div>
+  
   
   <div class="form-group">
     <div class="col-md-10 col-md-offset-2">
